@@ -1,13 +1,10 @@
 package com.wingo.stepdefinitions;
 
 
-import com.wingo.pages.ResultadoBusqueda;
 import com.wingo.pages.destinosInternacionales;
-import com.wingo.task.BuscaDestinoInternacional;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
@@ -15,12 +12,12 @@ import java.time.Duration;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class DestinoInternacionalStepDefs {
+public class CasoDos {
 
     @Cuando("{actor} busca un destino internacional como {string}")
     public void busca_un_destino_internacional_como(Actor actor, String destino) {
         actor.attemptsTo(
-                BuscaDestinoInternacional.simple(destino)
+                com.wingo.task.CasoDos.simple(destino)
         );
     }
     @Entonces("{actor} debe encontrar al menos {string} vuelos para {string}")

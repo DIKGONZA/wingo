@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class BuscalVueloNacionalSoloIdaMejorTarifaMesSiguiente {
+public class CasoCuatro {
     public static Performable simple(String origen, String destino) {
         return Task.where("{0} busca una vuelo nacional desde '" + origen + "' hacia '" + destino + " solo de ida y mejora tarifa mes siguiente",
                 Open.url("https://www.wingo.com/es"),
@@ -17,7 +17,8 @@ public class BuscalVueloNacionalSoloIdaMejorTarifaMesSiguiente {
                 Enter.theValue(origen).into(formularioBusqueda.INPUT_DESDE),
                 Click.on(formularioBusqueda.AEROPUERTO_ORIGEN_MED),
                 Click.on(formularioBusqueda.AEROPUERTO_DESTINO_BOG),
-                Click.on(formularioBusqueda.FECHA_MES_2_ULTIMA_FECHA_DISPONIBLE),
+                Click.on(formularioBusqueda.INPUT_FECHA_IDA),
+                Click.on(formularioBusqueda.ULTIMA_FECHA_DISPONIBLE_MES_2),
                 Click.on(formularioBusqueda.BOTON_BUSCAR)
         );
     }

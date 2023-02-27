@@ -1,8 +1,6 @@
 package com.wingo.stepdefinitions;
 
 import com.wingo.pages.ResultadoBusqueda;
-import com.wingo.task.BuscarVueloInternacional;
-import com.wingo.task.BuscarVueloInternacionalSoloIdaenUSD;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.Actor;
@@ -16,11 +14,11 @@ import java.util.Set;
 import static net.serenitybdd.core.Serenity.getDriver;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class VueloIntSoloIdaUSDStepdefs {
+public class CasoTres {
     @Cuando("{actor} busca vuelo de {string} a {string} en dolares y solo de ida en la ultima fecha disponible del mes siguiente")
     public void busca_vuelo_de_a_en_dolares_y_solo_de_ida_en_la_ultima_fecha_disponible_del_mes_siguiente(Actor actor, String origen, String destino) {
         actor.attemptsTo(
-                BuscarVueloInternacionalSoloIdaenUSD.simple(origen,destino)
+                com.wingo.task.CasoTres.simple(origen,destino)
         );
     }
     @Entonces("{actor} debe encontrar un vuelo de ida en la ultima fecha disponible del mes siguiente")

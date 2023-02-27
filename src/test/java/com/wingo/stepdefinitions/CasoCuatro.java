@@ -1,7 +1,6 @@
 package com.wingo.stepdefinitions;
 
 import com.wingo.pages.ResultadoBusqueda;
-import com.wingo.task.BuscalVueloNacionalSoloIdaMejorTarifaMesSiguiente;
 import com.wingo.task.MuestraTarifasDelMes;
 import com.wingo.task.SeleccionarMejorTarifaMesSiguiente;
 import io.cucumber.java.es.Cuando;
@@ -14,11 +13,12 @@ import java.time.Duration;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class VueloNacionalSoloIdaMejorTarifaMesSiguienteStepDefs {
+public class CasoCuatro {
+
     @Cuando("{actor} busca vuelo de {string} a {string} para el mes siguiente")
-    public void busca_vuelo_de_a_para_el_mes_siguiente(Actor actor, String origen, String destino) {
+    public void buscaVueloDeAParaElMesSiguiente(Actor actor, String origen, String destino) {
         actor.attemptsTo(
-            BuscalVueloNacionalSoloIdaMejorTarifaMesSiguiente.simple(origen,destino)
+                com.wingo.task.CasoCuatro.simple(origen,destino)
         );
     }
     @Entonces("{actor} debe seleccionar la mejor tarifa del mes")
@@ -33,4 +33,5 @@ public class VueloNacionalSoloIdaMejorTarifaMesSiguienteStepDefs {
                 SeleccionarMejorTarifaMesSiguiente.simple()
         );
     }
+
 }

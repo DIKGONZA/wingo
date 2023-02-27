@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class BuscarVueloInternacional {
+public class CasoUno {
     public static Performable simple(String origen,String destino) {
         return Task.where("{0} busca una vuelo desde '" + origen + "' hacia '" + destino,
                 Open.url("https://www.wingo.com/es"),
