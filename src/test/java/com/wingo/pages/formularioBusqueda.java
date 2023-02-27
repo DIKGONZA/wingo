@@ -19,5 +19,7 @@ public class formularioBusqueda {
     public static Target INPUT_MONEDA = Target.the("Input moneda").locatedBy("//div[@class='styledSelect styledSelectMoneda']");
     public static Target MONEDA_DOLAR = Target.the("MONEDA DOLAR").locatedBy("//ul[@id='currencies']/child::li[contains(text(),'USD')]");
     public static Target INPUT_VER_MES = Target.the("Ver Tarifas del mes").locatedBy("//input[@id='ver-mes']/..");
+    public static Target LINK_DESTINOS = Target.the("Link destinos").locatedBy("//a[@class='nav-link' and contains(text(),'Destinos')]");
+    public static Target LINK_DESTINO_LIMA = Target.the("Link destino LIMA").locatedBy("//a[contains(text(),'Lima')]");
 }
 
